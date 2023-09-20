@@ -1,0 +1,28 @@
+From 85e91525939c78656adb1a0f00123d9d22f4fa19 Mon Sep 17 00:00:00 2001
+From: "Suresh, Prashanth" <prashanth.suresh@intel.com>
+Date: Wed, 20 Sep 2023 12:18:37 +0530
+Subject: [PATCH] Include sample encode/decode files in image
+
+Include sample encode/decode files in vendor image.
+
+Tracked-On: OAM-112315
+Signed-off-by: Suresh, Prashanth <prashanth.suresh@intel.com>
+---
+ CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index eb2df352..abe84305 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -54,6 +54,7 @@ else()
+ endif()
+ 
+ option( ENABLE_OPENCL "Build targets dependent on OpenCL?" ON )
++option( BUILD_SAMPLES "Build samples?" ON )
+ 
+ # -DENABLE_ALL will enable all the dependencies and features unless user did not
+ # explicitly switched some of them OFF, i.e. configuring in the following way
+-- 
+2.42.0
+
